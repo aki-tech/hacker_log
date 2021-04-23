@@ -1,0 +1,9 @@
+<div class="content_title">
+  新規記事の作成
+</div>
+
+<%= form_with model: @post, class: :form, local: true do |form| %>
+  <%= form.text_field :title, placeholder: :タイトル, class: :form_title %>
+  <%= form.text_area :content, placeholder: :ブログ本文, class: :form_text %>
+  <%= form.submit '投稿する', class: :form_btmn %>
+<% end %>
